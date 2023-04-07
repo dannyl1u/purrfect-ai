@@ -19,7 +19,7 @@ def index():
             prompt=generate_prompt(animal),
             temperature=0.6,
         )
-        url = 'http://localhost:8080/translate'
+        url = 'https://purrfect-ai-bridge-server.onrender.com/translate'
         params = {'name': response.choices[0].text}
 
         response = requests.get(url, params=params)    
