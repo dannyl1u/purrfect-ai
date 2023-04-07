@@ -23,7 +23,7 @@ app.get('/translate', async (req, res) => {
 
     // call the flask api
     try {
-        const response = await axios.get(`http://localhost:8000/translate?name=${name}`);
+        const response = await axios.get(`https://translation-server.onrender.com/translate?name=${name}`);
         console.log(response.data);
         res.send(response.data);
     } catch (error) {
