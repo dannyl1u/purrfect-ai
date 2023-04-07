@@ -8,7 +8,6 @@ app.use( express.json())
 
 app.listen(
     PORT,
-    () => console.log(`It's alive on http://localhost:${PORT}`)
 ) 
 
 app.get('/', (req, res) => {
