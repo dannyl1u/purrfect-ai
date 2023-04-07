@@ -1,9 +1,8 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request
 import random
 
-
 app = Flask(__name__)
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
@@ -54,4 +53,4 @@ def translate():
     name = request.args.get('name')
     return translate_to_french(name)
 
-app.run(host="localhost", port=8000, debug=True)
+# app.run(host="localhost", port=8000, debug=True)
